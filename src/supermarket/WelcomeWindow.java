@@ -88,13 +88,14 @@ public class WelcomeWindow extends javax.swing.JFrame {
         {
             for(int i=0; i<=100; i++)
             {
-                Thread.sleep(20);
+                Thread.sleep(30);
                 openingWindow.progressBar.setValue(i);
             }
         }
         catch(Exception e) {}
         
-        
+        new LoginWindow().setVisible(true);
+        openingWindow.dispose();
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
