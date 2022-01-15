@@ -28,154 +28,154 @@ public class ProductManager extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
-        userNameLabel = new javax.swing.JLabel();
-        userNameTextField = new javax.swing.JTextField();
-        passwordLabel = new javax.swing.JLabel();
-        passwordTextField = new javax.swing.JTextField();
-        userNameLabel1 = new javax.swing.JLabel();
-        userNameTextField1 = new javax.swing.JTextField();
-        passwordLabel1 = new javax.swing.JLabel();
-        passwordTextField1 = new javax.swing.JTextField();
-        userTypeComboBox = new javax.swing.JComboBox<>();
-        passwordLabel2 = new javax.swing.JLabel();
-        loginButton = new javax.swing.JButton();
-        loginButton1 = new javax.swing.JButton();
-        loginButton2 = new javax.swing.JButton();
-        loginButton3 = new javax.swing.JButton();
-        jScrollPane1 = new javax.swing.JScrollPane();
-        jTable1 = new javax.swing.JTable();
-        jLabel1 = new javax.swing.JLabel();
+        productIDLabel = new javax.swing.JLabel();
+        productIDTextField = new javax.swing.JTextField();
+        productNameLabel = new javax.swing.JLabel();
+        productNameTextField = new javax.swing.JTextField();
+        quantityLabel = new javax.swing.JLabel();
+        quantityTextField = new javax.swing.JTextField();
+        priceLabel = new javax.swing.JLabel();
+        priceTextField = new javax.swing.JTextField();
+        categoryComboBox = new javax.swing.JComboBox<>();
+        categoryLabel = new javax.swing.JLabel();
+        addButton = new javax.swing.JButton();
+        editButton = new javax.swing.JButton();
+        deleteButton = new javax.swing.JButton();
+        clearButton = new javax.swing.JButton();
+        tableContainerPane = new javax.swing.JScrollPane();
+        productsTable = new javax.swing.JTable();
+        windowHeadingLabel = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
         setUndecorated(true);
 
         jPanel1.setBackground(new java.awt.Color(0, 153, 153));
 
-        userNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        userNameLabel.setForeground(new java.awt.Color(0, 153, 153));
-        userNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userNameLabel.setText("ID");
+        productIDLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        productIDLabel.setForeground(new java.awt.Color(0, 153, 153));
+        productIDLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        productIDLabel.setText("ID");
 
-        userNameTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
-        userNameTextField.setForeground(new java.awt.Color(0, 102, 102));
-        userNameTextField.setBorder(null);
-        userNameTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        userNameTextField.addActionListener(new java.awt.event.ActionListener() {
+        productIDTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        productIDTextField.setForeground(new java.awt.Color(0, 102, 102));
+        productIDTextField.setBorder(null);
+        productIDTextField.setMinimumSize(new java.awt.Dimension(2, 19));
+        productIDTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userNameTextFieldActionPerformed(evt);
+                productIDTextFieldActionPerformed(evt);
             }
         });
 
-        passwordLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        passwordLabel.setForeground(new java.awt.Color(0, 153, 153));
-        passwordLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        passwordLabel.setText("Name");
+        productNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        productNameLabel.setForeground(new java.awt.Color(0, 153, 153));
+        productNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        productNameLabel.setText("Name");
 
-        passwordTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
-        passwordTextField.setForeground(new java.awt.Color(0, 102, 102));
-        passwordTextField.setBorder(null);
-        passwordTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        passwordTextField.addActionListener(new java.awt.event.ActionListener() {
+        productNameTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        productNameTextField.setForeground(new java.awt.Color(0, 102, 102));
+        productNameTextField.setBorder(null);
+        productNameTextField.setMinimumSize(new java.awt.Dimension(2, 19));
+        productNameTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTextFieldActionPerformed(evt);
+                productNameTextFieldActionPerformed(evt);
             }
         });
 
-        userNameLabel1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        userNameLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        userNameLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        userNameLabel1.setText("Quantity");
+        quantityLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        quantityLabel.setForeground(new java.awt.Color(0, 153, 153));
+        quantityLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quantityLabel.setText("Quantity");
 
-        userNameTextField1.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
-        userNameTextField1.setForeground(new java.awt.Color(0, 102, 102));
-        userNameTextField1.setBorder(null);
-        userNameTextField1.setMinimumSize(new java.awt.Dimension(2, 19));
-        userNameTextField1.addActionListener(new java.awt.event.ActionListener() {
+        quantityTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        quantityTextField.setForeground(new java.awt.Color(0, 102, 102));
+        quantityTextField.setBorder(null);
+        quantityTextField.setMinimumSize(new java.awt.Dimension(2, 19));
+        quantityTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                userNameTextField1ActionPerformed(evt);
+                quantityTextFieldActionPerformed(evt);
             }
         });
 
-        passwordLabel1.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        passwordLabel1.setForeground(new java.awt.Color(0, 153, 153));
-        passwordLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        passwordLabel1.setText("Price");
+        priceLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        priceLabel.setForeground(new java.awt.Color(0, 153, 153));
+        priceLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        priceLabel.setText("Price");
 
-        passwordTextField1.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
-        passwordTextField1.setForeground(new java.awt.Color(0, 102, 102));
-        passwordTextField1.setBorder(null);
-        passwordTextField1.setMinimumSize(new java.awt.Dimension(2, 19));
-        passwordTextField1.addActionListener(new java.awt.event.ActionListener() {
+        priceTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        priceTextField.setForeground(new java.awt.Color(0, 102, 102));
+        priceTextField.setBorder(null);
+        priceTextField.setMinimumSize(new java.awt.Dimension(2, 19));
+        priceTextField.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                passwordTextField1ActionPerformed(evt);
+                priceTextFieldActionPerformed(evt);
             }
         });
 
-        userTypeComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
-        userTypeComboBox.setForeground(new java.awt.Color(0, 102, 102));
-        userTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Vegetable", "Meat", "Fruits", "Toiletries" }));
-        userTypeComboBox.setBorder(null);
+        categoryComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
+        categoryComboBox.setForeground(new java.awt.Color(0, 102, 102));
+        categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Vegetable", "Meat", "Fruits", "Toiletries" }));
+        categoryComboBox.setBorder(null);
 
-        passwordLabel2.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
-        passwordLabel2.setForeground(new java.awt.Color(0, 153, 153));
-        passwordLabel2.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        passwordLabel2.setText("Category");
+        categoryLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
+        categoryLabel.setForeground(new java.awt.Color(0, 153, 153));
+        categoryLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        categoryLabel.setText("Category");
 
-        loginButton.setBackground(new java.awt.Color(255, 255, 255));
-        loginButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
-        loginButton.setForeground(new java.awt.Color(0, 153, 153));
-        loginButton.setText("ADD");
-        loginButton.setBorder(null);
-        loginButton.setBorderPainted(false);
-        loginButton.setFocusPainted(false);
-        loginButton.addActionListener(new java.awt.event.ActionListener() {
+        addButton.setBackground(new java.awt.Color(255, 255, 255));
+        addButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
+        addButton.setForeground(new java.awt.Color(0, 153, 153));
+        addButton.setText("ADD");
+        addButton.setBorder(null);
+        addButton.setBorderPainted(false);
+        addButton.setFocusPainted(false);
+        addButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButtonActionPerformed(evt);
+                addButtonActionPerformed(evt);
             }
         });
 
-        loginButton1.setBackground(new java.awt.Color(255, 255, 255));
-        loginButton1.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
-        loginButton1.setForeground(new java.awt.Color(0, 153, 153));
-        loginButton1.setText("EDIT");
-        loginButton1.setBorder(null);
-        loginButton1.setBorderPainted(false);
-        loginButton1.setFocusPainted(false);
-        loginButton1.addActionListener(new java.awt.event.ActionListener() {
+        editButton.setBackground(new java.awt.Color(255, 255, 255));
+        editButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
+        editButton.setForeground(new java.awt.Color(0, 153, 153));
+        editButton.setText("EDIT");
+        editButton.setBorder(null);
+        editButton.setBorderPainted(false);
+        editButton.setFocusPainted(false);
+        editButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton1ActionPerformed(evt);
+                editButtonActionPerformed(evt);
             }
         });
 
-        loginButton2.setBackground(new java.awt.Color(255, 255, 255));
-        loginButton2.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
-        loginButton2.setForeground(new java.awt.Color(0, 153, 153));
-        loginButton2.setText("DELETE");
-        loginButton2.setBorder(null);
-        loginButton2.setBorderPainted(false);
-        loginButton2.setFocusPainted(false);
-        loginButton2.addActionListener(new java.awt.event.ActionListener() {
+        deleteButton.setBackground(new java.awt.Color(255, 255, 255));
+        deleteButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
+        deleteButton.setForeground(new java.awt.Color(0, 153, 153));
+        deleteButton.setText("DELETE");
+        deleteButton.setBorder(null);
+        deleteButton.setBorderPainted(false);
+        deleteButton.setFocusPainted(false);
+        deleteButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton2ActionPerformed(evt);
+                deleteButtonActionPerformed(evt);
             }
         });
 
-        loginButton3.setBackground(new java.awt.Color(255, 255, 255));
-        loginButton3.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
-        loginButton3.setForeground(new java.awt.Color(0, 153, 153));
-        loginButton3.setText("CLEAR");
-        loginButton3.setBorder(null);
-        loginButton3.setBorderPainted(false);
-        loginButton3.setFocusPainted(false);
-        loginButton3.addActionListener(new java.awt.event.ActionListener() {
+        clearButton.setBackground(new java.awt.Color(255, 255, 255));
+        clearButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
+        clearButton.setForeground(new java.awt.Color(0, 153, 153));
+        clearButton.setText("CLEAR");
+        clearButton.setBorder(null);
+        clearButton.setBorderPainted(false);
+        clearButton.setFocusPainted(false);
+        clearButton.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                loginButton3ActionPerformed(evt);
+                clearButtonActionPerformed(evt);
             }
         });
 
-        jTable1.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
-        jTable1.setForeground(new java.awt.Color(0, 102, 102));
-        jTable1.setModel(new javax.swing.table.DefaultTableModel(
+        productsTable.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
+        productsTable.setForeground(new java.awt.Color(0, 102, 102));
+        productsTable.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
                 {null, null, null, null, null},
                 {null, null, null, null, null},
@@ -188,10 +188,10 @@ public class ProductManager extends javax.swing.JFrame {
                 "ID", "NAME", "CATEGORY", "QUANTITY", "PRICE"
             }
         ));
-        jTable1.setGridColor(new java.awt.Color(0, 153, 153));
-        jTable1.setRowHeight(25);
-        jTable1.setSelectionBackground(new java.awt.Color(0, 153, 153));
-        jScrollPane1.setViewportView(jTable1);
+        productsTable.setGridColor(new java.awt.Color(0, 153, 153));
+        productsTable.setRowHeight(25);
+        productsTable.setSelectionBackground(new java.awt.Color(0, 153, 153));
+        tableContainerPane.setViewportView(productsTable);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
         jPanel2.setLayout(jPanel2Layout);
@@ -199,36 +199,36 @@ public class ProductManager extends javax.swing.JFrame {
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addContainerGap(195, Short.MAX_VALUE)
-                .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(34, 34, 34)
-                .addComponent(loginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(40, 40, 40)
-                .addComponent(loginButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(44, 44, 44)
-                .addComponent(loginButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(193, 193, 193))
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel2Layout.createSequentialGroup()
                 .addGap(43, 43, 43)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
-                    .addComponent(jScrollPane1)
+                    .addComponent(tableContainerPane)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordLabel2, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(productIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(categoryLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 85, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(37, 37, 37)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(userTypeComboBox, 0, 192, Short.MAX_VALUE))
+                            .addComponent(productNameTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(productIDTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(categoryComboBox, 0, 192, Short.MAX_VALUE))
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(userNameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(quantityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 93, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(priceLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 69, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(userNameTextField1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                            .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(quantityTextField, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                            .addComponent(priceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(55, 55, 55))
         );
         jPanel2Layout.setVerticalGroup(
@@ -238,48 +238,48 @@ public class ProductManager extends javax.swing.JFrame {
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.TRAILING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(userNameLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(userNameTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                            .addComponent(quantityLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(quantityTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
                         .addGap(18, 18, 18)
                         .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(passwordLabel1)
-                            .addComponent(passwordTextField1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                            .addComponent(priceLabel)
+                            .addComponent(priceTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
                     .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                         .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(userNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(passwordLabel))
+                            .addComponent(productNameLabel))
                         .addGroup(jPanel2Layout.createSequentialGroup()
-                            .addComponent(userNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addComponent(productIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
                             .addGap(18, 18, 18)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                            .addComponent(productNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))))
                 .addGap(26, 26, 26)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(passwordLabel2)
-                    .addComponent(userTypeComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(categoryLabel)
+                    .addComponent(categoryComboBox, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                    .addComponent(loginButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginButton1, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginButton2, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
-                    .addComponent(loginButton3, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 60, Short.MAX_VALUE)
-                .addComponent(jScrollPane1, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(tableContainerPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(31, 31, 31))
         );
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {passwordLabel, userNameLabel});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {productIDLabel, productNameLabel});
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {passwordTextField, userNameTextField});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {productIDTextField, productNameTextField});
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {passwordTextField1, userNameTextField1});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {priceTextField, quantityTextField});
 
-        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {passwordLabel1, userNameLabel1});
+        jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {priceLabel, quantityLabel});
 
-        jLabel1.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
-        jLabel1.setForeground(new java.awt.Color(239, 228, 173));
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("MANAGE PRODUCTS");
+        windowHeadingLabel.setFont(new java.awt.Font("Gill Sans MT", 1, 24)); // NOI18N
+        windowHeadingLabel.setForeground(new java.awt.Color(239, 228, 173));
+        windowHeadingLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        windowHeadingLabel.setText("MANAGE PRODUCTS");
 
         javax.swing.GroupLayout jPanel1Layout = new javax.swing.GroupLayout(jPanel1);
         jPanel1.setLayout(jPanel1Layout);
@@ -289,7 +289,7 @@ public class ProductManager extends javax.swing.JFrame {
                 .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(362, 362, 362)
-                        .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addComponent(windowHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE))
                     .addGroup(jPanel1Layout.createSequentialGroup()
                         .addGap(44, 44, 44)
                         .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)))
@@ -299,7 +299,7 @@ public class ProductManager extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(jLabel1, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addComponent(windowHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addContainerGap(22, Short.MAX_VALUE))
@@ -320,37 +320,37 @@ public class ProductManager extends javax.swing.JFrame {
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void userNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextFieldActionPerformed
+    private void productIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIDTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userNameTextFieldActionPerformed
+    }//GEN-LAST:event_productIDTextFieldActionPerformed
 
-    private void passwordTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextFieldActionPerformed
+    private void productNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextFieldActionPerformed
+    }//GEN-LAST:event_productNameTextFieldActionPerformed
 
-    private void userNameTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_userNameTextField1ActionPerformed
+    private void quantityTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_userNameTextField1ActionPerformed
+    }//GEN-LAST:event_quantityTextFieldActionPerformed
 
-    private void passwordTextField1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_passwordTextField1ActionPerformed
+    private void priceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceTextFieldActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_passwordTextField1ActionPerformed
+    }//GEN-LAST:event_priceTextFieldActionPerformed
 
-    private void loginButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButtonActionPerformed
+    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButtonActionPerformed
+    }//GEN-LAST:event_addButtonActionPerformed
 
-    private void loginButton1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton1ActionPerformed
+    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton1ActionPerformed
+    }//GEN-LAST:event_editButtonActionPerformed
 
-    private void loginButton2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton2ActionPerformed
+    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton2ActionPerformed
+    }//GEN-LAST:event_deleteButtonActionPerformed
 
-    private void loginButton3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_loginButton3ActionPerformed
+    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_loginButton3ActionPerformed
+    }//GEN-LAST:event_clearButtonActionPerformed
 
     /**
      * @param args the command line arguments
@@ -388,24 +388,24 @@ public class ProductManager extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel jLabel1;
+    private javax.swing.JButton addButton;
+    private javax.swing.JComboBox<String> categoryComboBox;
+    private javax.swing.JLabel categoryLabel;
+    private javax.swing.JButton clearButton;
+    private javax.swing.JButton deleteButton;
+    private javax.swing.JButton editButton;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel2;
-    private javax.swing.JScrollPane jScrollPane1;
-    private javax.swing.JTable jTable1;
-    private javax.swing.JButton loginButton;
-    private javax.swing.JButton loginButton1;
-    private javax.swing.JButton loginButton2;
-    private javax.swing.JButton loginButton3;
-    private javax.swing.JLabel passwordLabel;
-    private javax.swing.JLabel passwordLabel1;
-    private javax.swing.JLabel passwordLabel2;
-    private javax.swing.JTextField passwordTextField;
-    private javax.swing.JTextField passwordTextField1;
-    private javax.swing.JLabel userNameLabel;
-    private javax.swing.JLabel userNameLabel1;
-    private javax.swing.JTextField userNameTextField;
-    private javax.swing.JTextField userNameTextField1;
-    private javax.swing.JComboBox<String> userTypeComboBox;
+    private javax.swing.JLabel priceLabel;
+    private javax.swing.JTextField priceTextField;
+    private javax.swing.JLabel productIDLabel;
+    private javax.swing.JTextField productIDTextField;
+    private javax.swing.JLabel productNameLabel;
+    private javax.swing.JTextField productNameTextField;
+    private javax.swing.JTable productsTable;
+    private javax.swing.JLabel quantityLabel;
+    private javax.swing.JTextField quantityTextField;
+    private javax.swing.JScrollPane tableContainerPane;
+    private javax.swing.JLabel windowHeadingLabel;
     // End of variables declaration//GEN-END:variables
 }
