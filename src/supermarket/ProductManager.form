@@ -196,9 +196,6 @@
                   <Dimension value="[2, 19]"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productIDTextFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="productNameLabel">
               <Properties>
@@ -227,9 +224,6 @@
                   <Dimension value="[2, 19]"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="productNameTextFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="quantityLabel">
               <Properties>
@@ -258,9 +252,6 @@
                   <Dimension value="[2, 19]"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="quantityTextFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JLabel" name="priceLabel">
               <Properties>
@@ -289,9 +280,6 @@
                   <Dimension value="[2, 19]"/>
                 </Property>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="priceTextFieldActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JComboBox" name="categoryComboBox">
               <Properties>
@@ -348,9 +336,6 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="addButtonActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="editButton">
               <Properties>
@@ -370,9 +355,6 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="editButtonActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="deleteButton">
               <Properties>
@@ -392,9 +374,6 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="deleteButtonActionPerformed"/>
-              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="clearButton">
               <Properties>
@@ -414,9 +393,6 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
-              <Events>
-                <EventHandler event="actionPerformed" listener="java.awt.event.ActionListener" parameters="java.awt.event.ActionEvent" handler="clearButtonActionPerformed"/>
-              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="tableContainerPane">
               <AuxValues>

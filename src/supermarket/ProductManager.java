@@ -60,11 +60,6 @@ public class ProductManager extends javax.swing.JFrame {
         productIDTextField.setForeground(new java.awt.Color(0, 102, 102));
         productIDTextField.setBorder(null);
         productIDTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        productIDTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productIDTextFieldActionPerformed(evt);
-            }
-        });
 
         productNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         productNameLabel.setForeground(new java.awt.Color(0, 153, 153));
@@ -75,11 +70,6 @@ public class ProductManager extends javax.swing.JFrame {
         productNameTextField.setForeground(new java.awt.Color(0, 102, 102));
         productNameTextField.setBorder(null);
         productNameTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        productNameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                productNameTextFieldActionPerformed(evt);
-            }
-        });
 
         quantityLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         quantityLabel.setForeground(new java.awt.Color(0, 153, 153));
@@ -90,11 +80,6 @@ public class ProductManager extends javax.swing.JFrame {
         quantityTextField.setForeground(new java.awt.Color(0, 102, 102));
         quantityTextField.setBorder(null);
         quantityTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        quantityTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                quantityTextFieldActionPerformed(evt);
-            }
-        });
 
         priceLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         priceLabel.setForeground(new java.awt.Color(0, 153, 153));
@@ -105,11 +90,6 @@ public class ProductManager extends javax.swing.JFrame {
         priceTextField.setForeground(new java.awt.Color(0, 102, 102));
         priceTextField.setBorder(null);
         priceTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        priceTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                priceTextFieldActionPerformed(evt);
-            }
-        });
 
         categoryComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         categoryComboBox.setForeground(new java.awt.Color(0, 102, 102));
@@ -128,11 +108,6 @@ public class ProductManager extends javax.swing.JFrame {
         addButton.setBorder(null);
         addButton.setBorderPainted(false);
         addButton.setFocusPainted(false);
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
 
         editButton.setBackground(new java.awt.Color(255, 255, 255));
         editButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -141,11 +116,6 @@ public class ProductManager extends javax.swing.JFrame {
         editButton.setBorder(null);
         editButton.setBorderPainted(false);
         editButton.setFocusPainted(false);
-        editButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
-            }
-        });
 
         deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -154,11 +124,6 @@ public class ProductManager extends javax.swing.JFrame {
         deleteButton.setBorder(null);
         deleteButton.setBorderPainted(false);
         deleteButton.setFocusPainted(false);
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
-            }
-        });
 
         clearButton.setBackground(new java.awt.Color(255, 255, 255));
         clearButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -167,11 +132,6 @@ public class ProductManager extends javax.swing.JFrame {
         clearButton.setBorder(null);
         clearButton.setBorderPainted(false);
         clearButton.setFocusPainted(false);
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
-            }
-        });
 
         productsTable.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         productsTable.setForeground(new java.awt.Color(0, 102, 102));
@@ -319,38 +279,6 @@ public class ProductManager extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void productIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productIDTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productIDTextFieldActionPerformed
-
-    private void productNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_productNameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_productNameTextFieldActionPerformed
-
-    private void quantityTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_quantityTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_quantityTextFieldActionPerformed
-
-    private void priceTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_priceTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_priceTextFieldActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
-
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editButtonActionPerformed
-
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearButtonActionPerformed
 
     /**
      * @param args the command line arguments

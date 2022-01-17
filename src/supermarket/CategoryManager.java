@@ -56,11 +56,6 @@ public class CategoryManager extends javax.swing.JFrame {
         categoryIDTextField.setForeground(new java.awt.Color(0, 102, 102));
         categoryIDTextField.setBorder(null);
         categoryIDTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        categoryIDTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoryIDTextFieldActionPerformed(evt);
-            }
-        });
 
         categoryNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         categoryNameLabel.setForeground(new java.awt.Color(0, 153, 153));
@@ -71,11 +66,6 @@ public class CategoryManager extends javax.swing.JFrame {
         categoryNameTextField.setForeground(new java.awt.Color(0, 102, 102));
         categoryNameTextField.setBorder(null);
         categoryNameTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        categoryNameTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                categoryNameTextFieldActionPerformed(evt);
-            }
-        });
 
         descriptionLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         descriptionLabel.setForeground(new java.awt.Color(0, 153, 153));
@@ -86,11 +76,6 @@ public class CategoryManager extends javax.swing.JFrame {
         dscriptionTextField.setForeground(new java.awt.Color(0, 102, 102));
         dscriptionTextField.setBorder(null);
         dscriptionTextField.setMinimumSize(new java.awt.Dimension(2, 19));
-        dscriptionTextField.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                dscriptionTextFieldActionPerformed(evt);
-            }
-        });
 
         addButton.setBackground(new java.awt.Color(255, 255, 255));
         addButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -99,11 +84,6 @@ public class CategoryManager extends javax.swing.JFrame {
         addButton.setBorder(null);
         addButton.setBorderPainted(false);
         addButton.setFocusPainted(false);
-        addButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                addButtonActionPerformed(evt);
-            }
-        });
 
         editButton.setBackground(new java.awt.Color(255, 255, 255));
         editButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -112,11 +92,6 @@ public class CategoryManager extends javax.swing.JFrame {
         editButton.setBorder(null);
         editButton.setBorderPainted(false);
         editButton.setFocusPainted(false);
-        editButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                editButtonActionPerformed(evt);
-            }
-        });
 
         deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -125,11 +100,6 @@ public class CategoryManager extends javax.swing.JFrame {
         deleteButton.setBorder(null);
         deleteButton.setBorderPainted(false);
         deleteButton.setFocusPainted(false);
-        deleteButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                deleteButtonActionPerformed(evt);
-            }
-        });
 
         clearButton.setBackground(new java.awt.Color(255, 255, 255));
         clearButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -138,11 +108,6 @@ public class CategoryManager extends javax.swing.JFrame {
         clearButton.setBorder(null);
         clearButton.setBorderPainted(false);
         clearButton.setFocusPainted(false);
-        clearButton.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                clearButtonActionPerformed(evt);
-            }
-        });
 
         categoryTable.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         categoryTable.setForeground(new java.awt.Color(0, 102, 102));
@@ -210,11 +175,12 @@ public class CategoryManager extends javax.swing.JFrame {
                 .addGap(32, 32, 32)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                            .addComponent(categoryIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(categoryIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(descriptionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(dscriptionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(categoryIDTextField, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                                .addComponent(categoryIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(descriptionLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addComponent(dscriptionTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
                         .addGap(18, 18, 18)
                         .addComponent(categoryNameLabel))
                     .addGroup(jPanel2Layout.createSequentialGroup()
@@ -276,34 +242,6 @@ public class CategoryManager extends javax.swing.JFrame {
         pack();
         setLocationRelativeTo(null);
     }// </editor-fold>//GEN-END:initComponents
-
-    private void clearButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_clearButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_clearButtonActionPerformed
-
-    private void deleteButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_deleteButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_deleteButtonActionPerformed
-
-    private void editButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_editButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_editButtonActionPerformed
-
-    private void addButtonActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_addButtonActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_addButtonActionPerformed
-
-    private void dscriptionTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_dscriptionTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_dscriptionTextFieldActionPerformed
-
-    private void categoryNameTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryNameTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_categoryNameTextFieldActionPerformed
-
-    private void categoryIDTextFieldActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_categoryIDTextFieldActionPerformed
-        // TODO add your handling code here:
-    }//GEN-LAST:event_categoryIDTextFieldActionPerformed
 
     /**
      * @param args the command line arguments
