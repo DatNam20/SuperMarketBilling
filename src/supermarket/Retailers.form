@@ -45,17 +45,14 @@
         <DimensionLayout dim="0">
           <Group type="103" groupAlignment="0" attributes="0">
               <Group type="102" attributes="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <Group type="102" attributes="0">
-                          <EmptySpace min="-2" pref="44" max="-2" attributes="0"/>
-                          <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                      </Group>
-                      <Group type="102" alignment="0" attributes="0">
-                          <EmptySpace min="-2" pref="300" max="-2" attributes="0"/>
-                          <Component id="windowHeadingLabel" min="-2" pref="292" max="-2" attributes="0"/>
-                      </Group>
-                  </Group>
-                  <EmptySpace pref="53" max="32767" attributes="0"/>
+                  <EmptySpace max="32767" attributes="0"/>
+                  <Component id="windowHeadingLabel" min="-2" pref="292" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="280" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
+                  <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
+                  <EmptySpace pref="65" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -64,9 +61,9 @@
               <Group type="102" alignment="1" attributes="0">
                   <EmptySpace max="-2" attributes="0"/>
                   <Component id="windowHeadingLabel" min="-2" pref="41" max="-2" attributes="0"/>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
                   <Component id="jPanel2" min="-2" max="-2" attributes="0"/>
-                  <EmptySpace pref="39" max="32767" attributes="0"/>
+                  <EmptySpace pref="38" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -77,11 +74,32 @@
           <Layout>
             <DimensionLayout dim="0">
               <Group type="103" groupAlignment="0" attributes="0">
-                  <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                  <Group type="102" attributes="0">
+                      <Group type="103" groupAlignment="0" attributes="0">
                           <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="118" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="43" max="-2" attributes="0"/>
+                              <Group type="103" groupAlignment="0" attributes="0">
+                                  <Component id="retailerIDLabel" alignment="0" min="-2" pref="33" max="-2" attributes="0"/>
+                                  <Group type="102" alignment="0" attributes="0">
+                                      <Component id="retailerNameLabel" min="-2" pref="59" max="-2" attributes="0"/>
+                                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                                      <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                                          <Component id="retailerIDTextField" min="-2" pref="185" max="-2" attributes="0"/>
+                                          <Component id="retailerNameTextField" min="-2" pref="185" max="-2" attributes="0"/>
+                                      </Group>
+                                  </Group>
+                              </Group>
+                              <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
+                              <Component id="passwordLabel" min="-2" pref="97" max="-2" attributes="0"/>
+                              <EmptySpace type="separate" max="-2" attributes="0"/>
+                              <Component id="passwordTextField" min="-2" pref="196" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="61" max="-2" attributes="0"/>
+                              <Component id="tableContainerPane" min="-2" pref="591" max="-2" attributes="0"/>
+                          </Group>
+                          <Group type="102" alignment="0" attributes="0">
+                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                               <Component id="addButton" min="-2" pref="81" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="50" max="-2" attributes="0"/>
                               <Component id="editButton" min="-2" pref="87" max="-2" attributes="0"/>
@@ -90,57 +108,36 @@
                               <EmptySpace min="-2" pref="55" max="-2" attributes="0"/>
                               <Component id="clearButton" min="-2" pref="90" max="-2" attributes="0"/>
                           </Group>
-                          <Group type="102" attributes="0">
-                              <Group type="103" groupAlignment="0" attributes="0">
-                                  <Component id="retailerNameLabel" min="-2" pref="147" max="-2" attributes="0"/>
-                                  <Component id="passwordLabel" min="-2" pref="97" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                  <Component id="passwordTextField" min="-2" pref="192" max="-2" attributes="0"/>
-                                  <Component id="retailerNameTextField" min="-2" pref="192" max="-2" attributes="0"/>
-                              </Group>
-                              <EmptySpace min="-2" pref="113" max="-2" attributes="0"/>
-                              <Component id="retailerIDLabel" min="-2" pref="33" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="retailerIDTextField" min="-2" pref="192" max="-2" attributes="0"/>
-                          </Group>
-                          <Component id="tableContainerPane" alignment="0" max="32767" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="45" max="32767" attributes="0"/>
+                      <EmptySpace pref="59" max="32767" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
             <DimensionLayout dim="1">
               <Group type="103" groupAlignment="0" attributes="0">
                   <Group type="102" alignment="0" attributes="0">
-                      <EmptySpace min="-2" pref="38" max="-2" attributes="0"/>
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <Group type="102" attributes="0">
-                              <Component id="retailerNameLabel" linkSize="1" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace type="separate" max="-2" attributes="0"/>
-                              <Component id="passwordLabel" linkSize="1" min="-2" pref="28" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="102" alignment="0" attributes="0">
-                              <EmptySpace min="-2" pref="47" max="-2" attributes="0"/>
-                              <Component id="passwordTextField" linkSize="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          </Group>
-                          <Group type="103" groupAlignment="3" attributes="0">
-                              <Component id="retailerNameTextField" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
-                              <Component id="retailerIDLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                              <Component id="retailerIDTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                          </Group>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="retailerIDLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="retailerIDTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="passwordLabel" linkSize="1" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                          <Component id="passwordTextField" linkSize="3" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace pref="44" max="32767" attributes="0"/>
+                      <EmptySpace type="separate" max="-2" attributes="0"/>
+                      <Group type="103" groupAlignment="3" attributes="0">
+                          <Component id="retailerNameLabel" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
+                          <Component id="retailerNameTextField" linkSize="3" alignment="3" min="-2" max="-2" attributes="0"/>
+                      </Group>
+                      <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
                       <Group type="103" groupAlignment="3" attributes="0">
                           <Component id="addButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="editButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="deleteButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                           <Component id="clearButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       </Group>
-                      <EmptySpace min="-2" pref="53" max="-2" attributes="0"/>
-                      <Component id="tableContainerPane" min="-2" pref="210" max="-2" attributes="0"/>
-                      <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
+                      <EmptySpace pref="63" max="32767" attributes="0"/>
+                      <Component id="tableContainerPane" min="-2" pref="195" max="-2" attributes="0"/>
+                      <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                   </Group>
               </Group>
             </DimensionLayout>
@@ -183,7 +180,7 @@
                   <Color blue="99" green="99" red="0" type="rgb"/>
                 </Property>
                 <Property name="horizontalAlignment" type="int" value="0"/>
-                <Property name="text" type="java.lang.String" value="Retailer&apos;s Name"/>
+                <Property name="text" type="java.lang.String" value="Name"/>
               </Properties>
             </Component>
             <Component class="javax.swing.JTextField" name="retailerNameTextField">
@@ -270,6 +267,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="deleteButton">
               <Properties>
@@ -289,6 +289,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="clearButton">
               <Properties>
@@ -308,6 +311,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clearButtonMouseClicked"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="tableContainerPane">
               <AuxValues>
@@ -361,6 +367,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="retailersTableMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

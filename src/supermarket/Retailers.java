@@ -4,14 +4,20 @@
  */
 package supermarket;
 
-import com.sun.jdi.connect.spi.Connection;
-import java.beans.Statement;
-import org.apache.derby.iapi.sql.ResultSet;
+import java.sql.Connection;
+import java.sql.Statement;
+import java.sql.ResultSet;
 import java.sql.DriverManager;
+import java.sql.PreparedStatement;
+import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
+import net.proteanit.sql.DbUtils;
+import java.sql.SQLException;
+
 
 /**
  *
- * @author Akash
+ * @author Deepali
  */
 public class Retailers extends javax.swing.JFrame {
 
@@ -20,12 +26,26 @@ public class Retailers extends javax.swing.JFrame {
      */
     public Retailers() {
         initComponents();
+        selectRetailer();
     }
 
-    Connection Con = null;
-    Statement St = null;
-    ResultSet Rs = null;
+    Connection con = null;
+    Statement stmt = null;
+    ResultSet rset = null;
     
+    public void selectRetailer()
+    {
+        try
+        {
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+            stmt = con.createStatement();
+            rset = stmt.executeQuery("SELECT * from Deepali.RETAILERSTABLE");
+            
+            retailersTable.setModel(DbUtils.resultSetToTableModel(rset));
+        }
+
+        catch(Exception e) { e.printStackTrace(); }
+    }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
@@ -64,7 +84,7 @@ public class Retailers extends javax.swing.JFrame {
         retailerNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
         retailerNameLabel.setForeground(new java.awt.Color(0, 153, 153));
         retailerNameLabel.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        retailerNameLabel.setText("Retailer's Name");
+        retailerNameLabel.setText("Name");
 
         retailerNameTextField.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         retailerNameTextField.setForeground(new java.awt.Color(0, 102, 102));
@@ -101,6 +121,11 @@ public class Retailers extends javax.swing.JFrame {
         editButton.setBorder(null);
         editButton.setBorderPainted(false);
         editButton.setFocusPainted(false);
+        editButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                editButtonMouseClicked(evt);
+            }
+        });
 
         deleteButton.setBackground(new java.awt.Color(255, 255, 255));
         deleteButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -109,6 +134,11 @@ public class Retailers extends javax.swing.JFrame {
         deleteButton.setBorder(null);
         deleteButton.setBorderPainted(false);
         deleteButton.setFocusPainted(false);
+        deleteButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                deleteButtonMouseClicked(evt);
+            }
+        });
 
         clearButton.setBackground(new java.awt.Color(255, 255, 255));
         clearButton.setFont(new java.awt.Font("Gill Sans MT", 1, 18)); // NOI18N
@@ -117,6 +147,11 @@ public class Retailers extends javax.swing.JFrame {
         clearButton.setBorder(null);
         clearButton.setBorderPainted(false);
         clearButton.setFocusPainted(false);
+        clearButton.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                clearButtonMouseClicked(evt);
+            }
+        });
 
         retailersTable.setFont(new java.awt.Font("Bahnschrift", 0, 14)); // NOI18N
         retailersTable.setForeground(new java.awt.Color(0, 102, 102));
@@ -136,6 +171,11 @@ public class Retailers extends javax.swing.JFrame {
         retailersTable.setGridColor(new java.awt.Color(0, 153, 153));
         retailersTable.setRowHeight(25);
         retailersTable.setSelectionBackground(new java.awt.Color(0, 153, 153));
+        retailersTable.addMouseListener(new java.awt.event.MouseAdapter() {
+            public void mouseClicked(java.awt.event.MouseEvent evt) {
+                retailersTableMouseClicked(evt);
+            }
+        });
         tableContainerPane.setViewportView(retailersTable);
 
         javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
@@ -143,57 +183,57 @@ public class Retailers extends javax.swing.JFrame {
         jPanel2Layout.setHorizontalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(43, 43, 43)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(118, 118, 118)
+                        .addGap(43, 43, 43)
+                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                            .addComponent(retailerIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
+                            .addGroup(jPanel2Layout.createSequentialGroup()
+                                .addComponent(retailerNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                .addGap(18, 18, 18)
+                                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
+                                    .addComponent(retailerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE)
+                                    .addComponent(retailerNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 185, javax.swing.GroupLayout.PREFERRED_SIZE))))
+                        .addGap(55, 55, 55)
+                        .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE)
+                        .addGap(18, 18, 18)
+                        .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 196, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(61, 61, 61)
+                        .addComponent(tableContainerPane, javax.swing.GroupLayout.PREFERRED_SIZE, 591, javax.swing.GroupLayout.PREFERRED_SIZE))
+                    .addGroup(jPanel2Layout.createSequentialGroup()
+                        .addGap(103, 103, 103)
                         .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 81, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(50, 50, 50)
                         .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 87, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(47, 47, 47)
                         .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 104, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(55, 55, 55)
-                        .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                            .addComponent(retailerNameLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 147, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 97, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(18, 18, 18)
-                        .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING, false)
-                            .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE)
-                            .addComponent(retailerNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                        .addGap(113, 113, 113)
-                        .addComponent(retailerIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 33, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addGap(28, 28, 28)
-                        .addComponent(retailerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 192, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addComponent(tableContainerPane))
-                .addContainerGap(45, Short.MAX_VALUE))
+                        .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 90, javax.swing.GroupLayout.PREFERRED_SIZE)))
+                .addContainerGap(59, Short.MAX_VALUE))
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel2Layout.createSequentialGroup()
-                .addGap(38, 38, 38)
-                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addComponent(retailerNameLabel)
-                        .addGap(18, 18, 18)
-                        .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createSequentialGroup()
-                        .addGap(47, 47, 47)
-                        .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
-                        .addComponent(retailerNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(retailerIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
-                        .addComponent(retailerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 44, Short.MAX_VALUE)
+                .addGap(37, 37, 37)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(retailerIDLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(retailerIDTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(passwordTextField, javax.swing.GroupLayout.PREFERRED_SIZE, 28, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(18, 18, 18)
+                .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(retailerNameLabel)
+                    .addComponent(retailerNameTextField, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
+                .addGap(37, 37, 37)
                 .addGroup(jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(addButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(editButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(deleteButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE)
                     .addComponent(clearButton, javax.swing.GroupLayout.PREFERRED_SIZE, 32, javax.swing.GroupLayout.PREFERRED_SIZE))
-                .addGap(53, 53, 53)
-                .addComponent(tableContainerPane, javax.swing.GroupLayout.PREFERRED_SIZE, 210, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(28, 28, 28))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 63, Short.MAX_VALUE)
+                .addComponent(tableContainerPane, javax.swing.GroupLayout.PREFERRED_SIZE, 195, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(33, 33, 33))
         );
 
         jPanel2Layout.linkSize(javax.swing.SwingConstants.VERTICAL, new java.awt.Component[] {passwordLabel, retailerNameLabel});
@@ -210,23 +250,22 @@ public class Retailers extends javax.swing.JFrame {
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(jPanel1Layout.createSequentialGroup()
-                .addGroup(jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(44, 44, 44)
-                        .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
-                    .addGroup(jPanel1Layout.createSequentialGroup()
-                        .addGap(300, 300, 300)
-                        .addComponent(windowHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)))
-                .addContainerGap(53, Short.MAX_VALUE))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(windowHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 292, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(280, 280, 280))
+            .addGroup(jPanel1Layout.createSequentialGroup()
+                .addGap(63, 63, 63)
+                .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(65, Short.MAX_VALUE))
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
                 .addComponent(windowHeadingLabel, javax.swing.GroupLayout.PREFERRED_SIZE, 41, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(18, 18, 18)
+                .addGap(26, 26, 26)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(39, Short.MAX_VALUE))
+                .addContainerGap(38, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -245,16 +284,98 @@ public class Retailers extends javax.swing.JFrame {
     }// </editor-fold>//GEN-END:initComponents
 
     private void addButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_addButtonMouseClicked
-        // TODO add your handling code here:
-        try
+        
+        if(retailerIDTextField.getText().isEmpty() || retailerNameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "Please Fill all the Details");
+        
+        else
         {
-            Con = (Connection) DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+            try
+            {
+                con = DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+                PreparedStatement add = con.prepareStatement("INSERT into RETAILERSTABLE values(?, ?, ?)");
+
+                add.setInt(1, Integer.valueOf(retailerIDTextField.getText()));
+                add.setString(2, retailerNameTextField.getText());
+                add.setString(3, passwordTextField.getText());
+
+                int row = add.executeUpdate();
+                
+                con.close();
+                selectRetailer();
+            }
+
+            catch(Exception e) { e.printStackTrace(); }
         }
-        catch(Exception e)
-        {
-            
-        }
+        
     }//GEN-LAST:event_addButtonMouseClicked
+
+    private void retailersTableMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_retailersTableMouseClicked
+        
+        DefaultTableModel tableModel = (DefaultTableModel) retailersTable.getModel();
+        int selectedRow = retailersTable.getSelectedRow();
+        
+        retailerIDTextField.setText(tableModel.getValueAt(selectedRow, 0).toString());
+        retailerNameTextField.setText(tableModel.getValueAt(selectedRow, 1).toString());
+        passwordTextField.setText(tableModel.getValueAt(selectedRow, 2).toString());
+        
+    }//GEN-LAST:event_retailersTableMouseClicked
+
+    private void clearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearButtonMouseClicked
+        
+        retailerIDTextField.setText("");
+        retailerNameTextField.setText("");
+        passwordTextField.setText("");
+        
+    }//GEN-LAST:event_clearButtonMouseClicked
+
+    private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButtonMouseClicked
+        
+        if(retailerIDTextField.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "Enter the ID to be deleted");
+        
+        else if(JOptionPane.showConfirmDialog(this, "Are you sure to delete ?", "Confirm Deletion", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+        {
+            try
+            {
+                con = DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+                Statement add = con.createStatement();
+                
+                String rID = retailerIDTextField.getText();
+                String query = "DELETE from Deepali.RETAILERSTABLE where RID = " + rID;
+                
+                add.executeUpdate(query);
+                selectRetailer();
+            }
+
+            catch(Exception e) { e.printStackTrace(); }
+        }
+        
+    }//GEN-LAST:event_deleteButtonMouseClicked
+
+    private void editButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_editButtonMouseClicked
+        
+        if(retailerIDTextField.getText().isEmpty() || retailerNameTextField.getText().isEmpty() || passwordTextField.getText().isEmpty())
+            JOptionPane.showMessageDialog(this, "Please Fill all the Details");
+        
+        else if(JOptionPane.showConfirmDialog(this, "Are you sure to edit ?", "Confirm Editing", JOptionPane.YES_NO_OPTION) == JOptionPane.YES_OPTION)
+        {
+            try
+            {
+                con = DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+                Statement add = con.createStatement();
+                
+                String query = "UPDATE Deepali.RETAILERSTABLE set RNAME = '" + retailerNameTextField.getText() + "', RPASSWORD = '" + 
+                                    passwordTextField.getText() + "' where RID = " + retailerIDTextField.getText();
+                
+                add.executeUpdate(query);
+                selectRetailer();
+            }
+
+            catch(SQLException e) { e.printStackTrace(); }
+        }
+        
+    }//GEN-LAST:event_editButtonMouseClicked
 
     /**
      * @param args the command line arguments

@@ -6,7 +6,7 @@ package supermarket;
 
 /**
  *
- * @author Akash
+ * @author Deepali
  */
 public class LoginWindow extends javax.swing.JFrame {
 
