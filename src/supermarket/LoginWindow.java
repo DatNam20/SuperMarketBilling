@@ -64,7 +64,7 @@ public class LoginWindow extends javax.swing.JFrame {
         userTypeComboBox.setBackground(new java.awt.Color(0, 153, 153));
         userTypeComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         userTypeComboBox.setForeground(new java.awt.Color(0, 102, 102));
-        userTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Seller" }));
+        userTypeComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Admin", "Retailer" }));
         userTypeComboBox.setBorder(null);
 
         userNameLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
