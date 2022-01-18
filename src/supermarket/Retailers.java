@@ -26,14 +26,14 @@ public class Retailers extends javax.swing.JFrame {
      */
     public Retailers() {
         initComponents();
-        selectRetailer();
+        updateTable();
     }
 
     Connection con = null;
     Statement stmt = null;
     ResultSet rset = null;
     
-    public void selectRetailer()
+    public void updateTable()
     {
         try
         {
@@ -45,6 +45,13 @@ public class Retailers extends javax.swing.JFrame {
         }
 
         catch(Exception e) { e.printStackTrace(); }
+    }
+    
+    public void clearAllFields()
+    {
+        retailerIDTextField.setText("");
+        retailerNameTextField.setText("");
+        passwordTextField.setText("");
     }
     
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -302,7 +309,8 @@ public class Retailers extends javax.swing.JFrame {
                 int row = add.executeUpdate();
                 
                 con.close();
-                selectRetailer();
+                updateTable();
+                clearAllFields();
             }
 
             catch(Exception e) { e.printStackTrace(); }
@@ -322,11 +330,7 @@ public class Retailers extends javax.swing.JFrame {
     }//GEN-LAST:event_retailersTableMouseClicked
 
     private void clearButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_clearButtonMouseClicked
-        
-        retailerIDTextField.setText("");
-        retailerNameTextField.setText("");
-        passwordTextField.setText("");
-        
+        clearAllFields();
     }//GEN-LAST:event_clearButtonMouseClicked
 
     private void deleteButtonMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_deleteButtonMouseClicked
@@ -345,7 +349,8 @@ public class Retailers extends javax.swing.JFrame {
                 String query = "DELETE from Deepali.RETAILERSTABLE where RID = " + rID;
                 
                 add.executeUpdate(query);
-                selectRetailer();
+                updateTable();
+                clearAllFields();
             }
 
             catch(Exception e) { e.printStackTrace(); }
@@ -369,7 +374,8 @@ public class Retailers extends javax.swing.JFrame {
                                     passwordTextField.getText() + "' where RID = " + retailerIDTextField.getText();
                 
                 add.executeUpdate(query);
-                selectRetailer();
+                updateTable();
+                clearAllFields();
             }
 
             catch(SQLException e) { e.printStackTrace(); }

@@ -108,7 +108,7 @@
                                           </Group>
                                           <Group type="102" alignment="0" attributes="0">
                                               <EmptySpace min="-2" pref="26" max="-2" attributes="0"/>
-                                              <Component id="dscriptionTextField" min="-2" pref="192" max="-2" attributes="0"/>
+                                              <Component id="descriptionTextField" min="-2" pref="192" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                   </Group>
@@ -139,7 +139,7 @@
                                   <Group type="103" groupAlignment="3" attributes="0">
                                       <Component id="categoryIDLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                       <Component id="descriptionLabel" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
-                                      <Component id="dscriptionTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
+                                      <Component id="descriptionTextField" alignment="3" min="-2" pref="28" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                               <EmptySpace type="separate" max="-2" attributes="0"/>
@@ -233,7 +233,7 @@
                 <Property name="text" type="java.lang.String" value="Description"/>
               </Properties>
             </Component>
-            <Component class="javax.swing.JTextField" name="dscriptionTextField">
+            <Component class="javax.swing.JTextField" name="descriptionTextField">
               <Properties>
                 <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
                   <Font name="Gill Sans MT" size="16" style="0"/>
@@ -267,6 +267,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="addButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="editButton">
               <Properties>
@@ -286,6 +289,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="editButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="deleteButton">
               <Properties>
@@ -305,6 +311,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="deleteButtonMouseClicked"/>
+              </Events>
             </Component>
             <Component class="javax.swing.JButton" name="clearButton">
               <Properties>
@@ -324,6 +333,9 @@
                 <Property name="borderPainted" type="boolean" value="false"/>
                 <Property name="focusPainted" type="boolean" value="false"/>
               </Properties>
+              <Events>
+                <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="clearButtonMouseClicked"/>
+              </Events>
             </Component>
             <Container class="javax.swing.JScrollPane" name="tableContainerPane">
               <AuxValues>
@@ -377,6 +389,9 @@
                       <TableHeader reorderingAllowed="true" resizingAllowed="true"/>
                     </Property>
                   </Properties>
+                  <Events>
+                    <EventHandler event="mouseClicked" listener="java.awt.event.MouseListener" parameters="java.awt.event.MouseEvent" handler="categoryTableMouseClicked"/>
+                  </Events>
                 </Component>
               </SubComponents>
             </Container>

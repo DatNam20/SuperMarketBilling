@@ -93,7 +93,7 @@ public class ProductManager extends javax.swing.JFrame {
 
         categoryComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         categoryComboBox.setForeground(new java.awt.Color(0, 102, 102));
-        categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Vegetable", "Meat", "Fruits", "Toiletries" }));
+        categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Vegetable", "Meat", "Fruit", "Toiletries" }));
         categoryComboBox.setBorder(null);
 
         categoryLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N

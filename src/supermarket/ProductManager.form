@@ -294,7 +294,7 @@
                     <StringItem index="0" value="Beverage"/>
                     <StringItem index="1" value="Vegetable"/>
                     <StringItem index="2" value="Meat"/>
-                    <StringItem index="3" value="Fruits"/>
+                    <StringItem index="3" value="Fruit"/>
                     <StringItem index="4" value="Toiletries"/>
                   </StringArray>
                 </Property>
