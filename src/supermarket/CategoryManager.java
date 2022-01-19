@@ -16,7 +16,7 @@ import net.proteanit.sql.DbUtils;
 
 /**
  *
- * @author Akash
+ * @author Deepali
  */
 public class CategoryManager extends javax.swing.JFrame {
 

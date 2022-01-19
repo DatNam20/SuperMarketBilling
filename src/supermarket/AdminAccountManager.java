@@ -13,7 +13,7 @@ import javax.swing.JOptionPane;
 
 /**
  *
- * @author Akash
+ * @author Deepali
  */
 public class AdminAccountManager extends javax.swing.JFrame {
 
