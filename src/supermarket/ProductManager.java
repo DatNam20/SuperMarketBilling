@@ -26,6 +26,7 @@ public class ProductManager extends javax.swing.JFrame {
     public ProductManager() {
         initComponents();
         refreshTable();
+        refreshCategoryBox();
     }
 
     Connection con = null;
@@ -41,6 +42,26 @@ public class ProductManager extends javax.swing.JFrame {
             rset = stmt.executeQuery("SELECT * from Deepali.PRODUCTSTABLE");
             
             productsTable.setModel(DbUtils.resultSetToTableModel(rset));
+        }
+
+        catch(Exception e) { e.printStackTrace(); }
+    }
+    
+    public void refreshCategoryBox()
+    {
+        try
+        {
+            con = DriverManager.getConnection("jdbc:derby://localhost:1527/SuperMarketDatabase", "Deepali", "password");
+            stmt = con.createStatement();
+            
+            String query = "SELECT * from Deepali.CATEGORYTABLE";
+            rset = stmt.executeQuery(query);
+            
+            while(rset.next())
+            {
+                String thisCategory = rset.getString("CNAME");
+                categoryComboBox.addItem(thisCategory);
+            }
         }
 
         catch(Exception e) { e.printStackTrace(); }
@@ -131,7 +152,6 @@ public class ProductManager extends javax.swing.JFrame {
 
         categoryComboBox.setFont(new java.awt.Font("Gill Sans MT", 0, 16)); // NOI18N
         categoryComboBox.setForeground(new java.awt.Color(0, 102, 102));
-        categoryComboBox.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Beverage", "Vegetable", "Meat", "Fruit", "Toiletries" }));
         categoryComboBox.setBorder(null);
 
         categoryLabel.setFont(new java.awt.Font("Bahnschrift", 0, 18)); // NOI18N
@@ -367,7 +387,7 @@ public class ProductManager extends javax.swing.JFrame {
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, jPanel1Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(windowHeadingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE)
+                .addComponent(windowHeadingLabel, javax.swing.GroupLayout.DEFAULT_SIZE, 45, Short.MAX_VALUE)
                 .addGap(18, 18, 18)
                 .addComponent(jPanel2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(21, 21, 21))

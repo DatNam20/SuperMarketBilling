@@ -47,27 +47,17 @@
               <Group type="102" attributes="0">
                   <Group type="103" groupAlignment="0" attributes="0">
                       <Group type="102" attributes="0">
+                          <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
                           <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="135" max="-2" attributes="0"/>
-                                  <Component id="loginButton" min="-2" pref="104" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="86" max="-2" attributes="0"/>
-                                  <Component id="clearButton" min="-2" pref="104" max="-2" attributes="0"/>
-                              </Group>
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="81" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" attributes="0">
-                                      <Component id="loginAsLabel" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
-                                      <Component id="userNameLabel" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
-                                      <Component id="passwordLabel" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
-                                  </Group>
-                                  <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
-                                  <Group type="103" groupAlignment="0" max="-2" attributes="0">
-                                      <Component id="userTypeComboBox" max="32767" attributes="0"/>
-                                      <Component id="userNameTextField" alignment="0" max="32767" attributes="0"/>
-                                      <Component id="passwordTextField" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
-                                  </Group>
-                              </Group>
+                              <Component id="loginAsLabel" alignment="0" min="-2" pref="87" max="-2" attributes="0"/>
+                              <Component id="userNameLabel" alignment="0" min="-2" pref="106" max="-2" attributes="0"/>
+                              <Component id="passwordLabel" alignment="0" min="-2" pref="97" max="-2" attributes="0"/>
+                          </Group>
+                          <EmptySpace min="-2" pref="79" max="-2" attributes="0"/>
+                          <Group type="103" groupAlignment="0" max="-2" attributes="0">
+                              <Component id="userTypeComboBox" max="32767" attributes="0"/>
+                              <Component id="userNameTextField" alignment="0" max="32767" attributes="0"/>
+                              <Component id="passwordTextField" alignment="0" min="-2" pref="258" max="-2" attributes="0"/>
                           </Group>
                           <EmptySpace min="0" pref="89" max="32767" attributes="0"/>
                       </Group>
@@ -85,6 +75,13 @@
                   <Component id="logoLabel_bz" min="-2" max="-2" attributes="0"/>
                   <EmptySpace max="32767" attributes="0"/>
                   <Component id="exitLabel" min="-2" pref="40" max="-2" attributes="0"/>
+              </Group>
+              <Group type="102" alignment="0" attributes="0">
+                  <EmptySpace min="-2" pref="154" max="-2" attributes="0"/>
+                  <Component id="loginButton" min="-2" pref="104" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="66" max="-2" attributes="0"/>
+                  <Component id="clearButton" min="-2" pref="104" max="-2" attributes="0"/>
+                  <EmptySpace min="0" pref="0" max="32767" attributes="0"/>
               </Group>
           </Group>
         </DimensionLayout>
@@ -116,12 +113,12 @@
                       <Component id="passwordLabel" linkSize="2" alignment="3" min="-2" max="-2" attributes="0"/>
                       <Component id="passwordTextField" linkSize="1" alignment="3" min="-2" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace min="-2" pref="46" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="49" max="-2" attributes="0"/>
                   <Group type="103" groupAlignment="3" attributes="0">
                       <Component id="loginButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                       <Component id="clearButton" alignment="3" min="-2" pref="32" max="-2" attributes="0"/>
                   </Group>
-                  <EmptySpace type="separate" max="-2" attributes="0"/>
+                  <EmptySpace min="-2" pref="15" max="-2" attributes="0"/>
                   <Component id="iconLabel" min="-2" max="-2" attributes="0"/>
                   <EmptySpace min="-2" pref="8" max="-2" attributes="0"/>
               </Group>
@@ -177,7 +174,7 @@
         <Component class="javax.swing.JComboBox" name="userTypeComboBox">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="99" green="99" red="0" type="rgb"/>
+              <Color blue="ff" green="cc" red="cc" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="16" style="0"/>
@@ -214,7 +211,7 @@
         <Component class="javax.swing.JTextField" name="userNameTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="ec" green="e6" red="e3" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="18" style="0"/>
@@ -245,7 +242,7 @@
         <Component class="javax.swing.JTextField" name="passwordTextField">
           <Properties>
             <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="cc" green="cc" red="cc" type="rgb"/>
+              <Color blue="ec" green="e6" red="e3" type="rgb"/>
             </Property>
             <Property name="font" type="java.awt.Font" editor="org.netbeans.beaninfo.editors.FontEditor">
               <Font name="Gill Sans MT" size="18" style="0"/>
