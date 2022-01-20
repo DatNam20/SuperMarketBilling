@@ -26,14 +26,14 @@ public class RetailerManager extends javax.swing.JFrame {
      */
     public RetailerManager() {
         initComponents();
-        updateTable();
+        refreshTable();
     }
 
     Connection con = null;
     Statement stmt = null;
     ResultSet rset = null;
     
-    public void updateTable()
+    public void refreshTable()
     {
         try
         {
@@ -327,7 +327,7 @@ public class RetailerManager extends javax.swing.JFrame {
                 int row = add.executeUpdate();
                 
                 con.close();
-                updateTable();
+                refreshTable();
                 clearAllFields();
             }
 
@@ -367,7 +367,7 @@ public class RetailerManager extends javax.swing.JFrame {
                 String query = "DELETE from Deepali.RETAILERSTABLE where RID = " + rID;
                 
                 add.executeUpdate(query);
-                updateTable();
+                refreshTable();
                 clearAllFields();
             }
 
@@ -392,7 +392,7 @@ public class RetailerManager extends javax.swing.JFrame {
                                     passwordTextField.getText() + "' where RID = " + retailerIDTextField.getText();
                 
                 add.executeUpdate(query);
-                updateTable();
+                refreshTable();
                 clearAllFields();
             }
 
